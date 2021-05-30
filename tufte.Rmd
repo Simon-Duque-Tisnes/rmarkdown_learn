@@ -1,0 +1,37 @@
+---
+title: Tufte theme
+author: Simón Duque Tisnés
+output:
+  tufte::tufte_html: default
+  tufte::tufte_handout: default
+bibliography: bibliography.bib  
+---
+As said by [@Garcia2007], "Use LaTeX"
+See Figure \@ref(fig:cars-plot).
+
+```{r cars-plot, fig.cap="The cars data.", echo=FALSE}
+par(mar = c(4, 4, .2, .1))
+plot(cars)  # a scatterplot
+```
+
+Also see Equation \@ref(eq:mean).
+
+\begin{equation}
+\bar{X} = \frac{\sum_{i=1}^n X_i}{n} (\#eq:mean)
+\end{equation}
+
+And see Table \@ref(tab:mtcars).
+
+```{r mtcars, echo=FALSE}
+knitr::kable(mtcars[1:5, 1:5], caption = "The mtcars data.")
+```
+
+```{r cars, fig.cap = "An amazing plot"}
+plot(cars)
+```
+
+```{r mtcars2, fig.cap = "Another amazing plot"}
+plot(mpg ~ hp, mtcars)
+```
+
+# References
